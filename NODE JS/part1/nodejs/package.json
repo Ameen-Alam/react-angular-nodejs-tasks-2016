@@ -1,0 +1,14 @@
+{
+  "name": "nodets",
+  "version": "1.0.0",
+  "description": "practice app",
+  "main": "server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MIT",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

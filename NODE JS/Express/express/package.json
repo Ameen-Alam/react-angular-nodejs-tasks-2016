@@ -1,0 +1,22 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "my new app",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon main.js",
+    "start": "npm run dev"
+  },
+  "author": "Ameen Alam",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "express-validator": "^5.2.0",
+    "mongoose": "^5.1.4",
+    "nodemon": "^1.17.5",
+    "pug": "^2.0.3",
+    "twig": "^1.11.1"
+  }
+}

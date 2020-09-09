@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Socket.IO chat</title>
+</head>
+
+<body>
+    <ul id="message">
+    </ul>
+    <form action="">
+        <input id="m" autocomplete="off" />
+        <button> Send </button>
+    </form>
+    <script src="/socket.io/lib/socket.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(function () {
+            var socket = io();
+            $('form').submit(function () {
+                socket.emit('chat', $('#m'.val()));
+                $('#m').val('');
+                return false
+            });
+            socket.on('chat', function(msg){
+                $("message").append($("<li>").text(msg))
+            } )
+        })
+    </script>
+</body>
+
+</html>

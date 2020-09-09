@@ -1,0 +1,29 @@
+<html>
+    <head></head>
+    <body>
+        <h1>{{title}}</h1>
+        
+        <form method="post" action="/">
+            <label> UserName   <input type="text" name="username" value={{ user.username }} /> </label> <br>
+            <p>
+                {% if errors.username %}
+                    {{ errors.username.msg }}
+                {% endif %}
+            </p>
+            <label> Password   <input type="password" name="password" value={{ user.password }} /> </label> <br>
+            <p>
+                {% if errors.password %}
+                    {{ errors.password.msg }}
+                {% endif %}
+            </p>
+            <label> Re-Password  <input type="password" name="rpassword" /> </label> <br>
+            <p>
+                {% if errors.rpassword %}
+                    {{ errors.rpassword.msg }}
+                {% endif %}
+            </p>
+            <input type="submit" >
+        </form>
+
+    </body>
+</html>
